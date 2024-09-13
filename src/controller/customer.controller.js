@@ -1,7 +1,7 @@
 import Customer from "../models/Customer.js";
-import jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-dotenv.config()
+dotenv.config();
 
 const register = async (req, res) => {
   const { username, email, password } = req.body;
@@ -20,7 +20,11 @@ const register = async (req, res) => {
   }
 
   try {
-    const newCustomer = await Customer.create({ username, email, password });
+    const newCustomer = await Customer.create({
+      username: username,
+      email: email,
+      password: encodedPassword,
+    });
     console.log(newCustomer);
     return res.status(200).json({ msg: "สมัครสมาชิกเสร็จสิ้น" });
   } catch (err) {
@@ -35,7 +39,7 @@ const login = async (req, res) => {
     return res.status(400).json({ msg: "กรุณากรอกข้อมูลให้ครบถ้วน" });
   }
 
-  const user = await Customer.findOne({ where: { username, password } });
+  const user = await Customer.findOne({ where: { username } });
 
   if (!user) {
     return res.status(401).json({ msg: "ชื่อผู้ใช้ หรือ รหัสผ่าน ไม่ถูกต้อง" });

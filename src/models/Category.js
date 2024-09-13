@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db/connection.js";
-import Menu from "./Menu.js";
 
 const Category = sequelize.define("categories", {
   id: {
