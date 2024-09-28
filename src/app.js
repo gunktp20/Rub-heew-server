@@ -18,18 +18,30 @@ const orders = [
     destination: "หอพัก The muse A",
     price: 185,
     phone_number: "081-234-5678",
+    position: {
+      lat: 14.02208605520346,
+      lng: 99.99250628669407
+    }
   },
   {
     id: "10012",
     destination: "หอ นกฮูก 8",
     price: 151,
     phone_number: "086-987-6543",
+    position: {
+      lat: 14.02370095436186,
+      lng: 99.99761805746458
+    }
   },
   {
     id: "10013",
     destination: "D-Condo",
     price: 310,
     phone_number: "089-555-1234",
+    position: {
+      lat: 14.022976969245889,
+      lng: 99.99212905571123
+    }
   },
   { id: "10014", destination: "VS", price: 85, phone_number: "080-456-7890" },
   {
@@ -37,12 +49,20 @@ const orders = [
     destination: "บ้านอยู่สบาย",
     price: 98,
     phone_number: "084-321-0987",
+    position: {
+      lat: 14.02112391053382,
+      lng: 99.99297452362285
+    }
   },
   {
     id: "10016",
     destination: "ม เกษตร",
     price: 310,
     phone_number: "085-123-4567",
+    position: {
+      lat: 14.021952142943354,
+      lng: 99.99012384812518
+    }
   },
 ];
 
